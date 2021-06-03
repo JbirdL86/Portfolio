@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+header {
+  display: block;
+}
+
+.navbar {
+  background-color: #3c3a39;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  padding: 0 24px;
+}
+
+.navbar > * {
+  color: white;
+}
+
+.menu > * {
+  color: #fff;
+}
+
+.profile {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  align-self: center;
+}
+
+.introduction {
+  background-color: #1c1a19;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 120px 24px;
+  background-image: url(assets/illustration-header-mobile.png);
+  background-position: right 125%;
+  background-repeat: no-repeat;
+}
+
+.introduction > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.introduction > div > * {
+  margin: 12px 0;
+}
+
+.presentation {
+  color: #ff6b00;
+  margin-top: 120px;
+  font-size: 56px;
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Crete Round', serif;
+  line-height: 64px;
+  letter-spacing: 0.37px;
+  order: 0;
+  flex-grow: 0;
+}
+
+.profesion {
+  color: #fff5e1;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  order: 1;
+  flex-grow: 0;
+}
+
+.context {
+  color: #fff;
+  order: 2;
+  flex-grow: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.social {
+  color: white;
+  display: flex;
+}
