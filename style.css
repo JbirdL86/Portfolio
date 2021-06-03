@@ -25,6 +25,10 @@ header {
   color: white;
 }
 
+.menu > * {
+  color: #fff;
+}
+
 .profile {
   font-style: normal;
   font-weight: bold;
@@ -60,6 +64,7 @@ header {
   font-size: 56px;
   font-weight: normal;
   font-style: normal;
+  font-family: 'Crete Round', serif;
   line-height: 64px;
   letter-spacing: 0.37px;
   order: 0;
@@ -71,6 +76,7 @@ header {
   font-size: 24px;
   font-style: normal;
   font-weight: bold;
+  font-family: 'Roboto', sans-serif;
   order: 1;
   flex-grow: 0;
 }
@@ -79,6 +85,7 @@ header {
   color: #fff;
   order: 2;
   flex-grow: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 .social {
