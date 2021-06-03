@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+  header {
+      display: block;
+  }
+
+.navbar {
+  background-color: #3C3A39;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  padding: 0 24px;
+}
+
+.navbar > *{
+  color: white;
+}
+
+.profile {
+  font-style: normal;
+  font-weight: bold; 
+  font-size: 18px;
+  line-height: 24px;
+  align-self: center;
+}
+
+.introduction {
+  background-color: #1C1A19;
+  display: flex;
+  flex-direction: column;
+  height: 590px;
+  width: 100%;
+}
