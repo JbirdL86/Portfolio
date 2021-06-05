@@ -254,9 +254,11 @@ header {
   text-align: center;
   margin: 12px 0;
 }
+
 .streched:hover {
-  border:2px solid blue;
+  border: 2px solid blue;
 }
+
 .aboutme-container {
   background: #1c1a19;
   width: 100%;
