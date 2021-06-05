@@ -12,6 +12,10 @@
   text-decoration: none;
 }
 
+button:hover {
+  border: 2px solid blue;
+}
+
 header {
   display: block;
 }
@@ -163,6 +167,11 @@ header {
   font-family: 'Inter', sans-serif;
   padding: 10px 12px;
   margin: 12px 0;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.textgrid:hover {
+  border: 2px solid blue;
 }
 
 .seeproject {
@@ -245,7 +254,9 @@ header {
   text-align: center;
   margin: 12px 0;
 }
-
+.streched:hover {
+  border:2px solid blue;
+}
 .aboutme-container {
   background: #1c1a19;
   width: 100%;
@@ -315,9 +326,10 @@ header {
 
 .list-profile {
   display: flex;
+  justify-content: center;
 }
 
-.list-profile > a > h2 {
+.list-profile > h2 {
   font-family: 'InaiMathi', serif;
   font-style: normal;
   font-weight: bold;
@@ -337,21 +349,5 @@ header {
 }
 
 .languages > li {
-  margin: 12px 0;
-}
-
-.frameworks {
-  text-align: center;
-}
-
-.frameworks > li {
-  margin: 12px 0;
-}
-
-.skills {
-  text-align: center;
-}
-
-.skills > li {
-  margin: 12px 0;
+  margin: 30px 0;
 }
