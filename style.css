@@ -156,17 +156,16 @@ header {
 }
 
 .button-grid {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 0 12px;
-  justify-content: flex-start;
+  display: inline-block;
+  width: 100%;
 }
 
 .textgrid {
   border: 1px solid #8993a4;
   font-family: 'Inter', sans-serif;
+  float: left;
   padding: 10px 12px;
-  margin: 12px 0;
+  margin: 12px 9px 12px 0;
   background: rgba(255, 255, 255, 0.24);
 }
 
