@@ -355,7 +355,7 @@ header {
 }
 
 .form-container {
-  height: 824px;
+  height: 844px;
   padding: 120px 24px;
   display: flex;
   flex-direction: column;
@@ -437,4 +437,37 @@ header {
   font-weight: bold;
   text-align: center;
   border: none;
+}
+
+.bottom-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 72px;
+  width: 375px;
+  border-top: 1px solid #dfe1e6;
+  margin-bottom: 8px;
+}
+
+.bottom-nav ul {
+  width: 200px;
+  height: 40px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: #505f79;
+  margin-top: 24px;
+  padding-bottom: 13px;
+}
+
+.bottom-nav:after {
+  content: '';
+  height: 5px;
+  width: 134px;
+  position: relative;
+  background-color: #0d151e;
+  border-radius: 10px;
 }
