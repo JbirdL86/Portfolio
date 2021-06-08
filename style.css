@@ -357,12 +357,17 @@ header {
 .form-container {
   height: 824px;
   padding: 120px 24px;
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .form-title {
-  border: 1px solid blue;
   text-align: center;
+  margin-bottom: 58px;
+  width: 327px;
+  height: 216px;
 }
 
 .form-title h3 {
@@ -371,4 +376,65 @@ header {
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
+}
+
+.name {
+  width: 327px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #dBd8d7;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.name input::placeholder {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #979493;
+  opacity: 0.8;
+}
+
+.textarea textarea {
+  border: none;
+  background-color: #FBF8F7;
+  width: 327px;
+  height: 114px;
+  padding: 12px;
+  margin-bottom: 24px;
+}
+
+.textarea textarea::placeholder {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  color: #3c3a39;
+  opacity: 1;
+}
+
+.name input {
+  border: none;
+  width: 295px;
+  height: 18px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container button {
+  background-color: #ff6b00;
+  padding: 12px;
+  color: #fff;
+  letter-spacing: 0.03em;
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  border: none;
 }
