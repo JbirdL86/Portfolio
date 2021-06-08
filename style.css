@@ -384,7 +384,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-bottom: 1px solid #dBd8d7;
+  border-bottom: 1px solid #dbd8d7;
   align-items: center;
   margin-bottom: 24px;
 }
@@ -399,7 +399,7 @@ header {
 
 .textarea textarea {
   border: none;
-  background-color: #FBF8F7;
+  background-color: #fbf8f7;
   width: 327px;
   height: 114px;
   padding: 12px;
@@ -463,7 +463,7 @@ header {
   padding-bottom: 13px;
 }
 
-.bottom-nav:after {
+.bottom-nav::after {
   content: '';
   height: 5px;
   width: 134px;
