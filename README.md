@@ -22,10 +22,17 @@
 
 👤 **Author1**
 
+Juan Gonzalez
+
 - Github: [@githubhandle](https://github.com/JbirdL86)
 - Twitter: [@twitterhandle](https://twitter.com/JuanLui06498455)
 - Linkedin: [linkedin](https://www.linkedin.com/in/juan-luis-0551921aa/)
 
+Juan Hernandez
+
+- GitHub: [@githubhandle](https://github.com/jchernandez87)
+- Twitter: [@twitterhandle](https://twitter.com/Juancar70771241)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/juan-carlos-hernandez-200a05175)
 
 ## 🤝 Contributing
 
