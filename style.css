@@ -482,12 +482,10 @@ header {
   border-radius: 10px;
 }
 
-@media only screen and (min-width: 600px){
-
+@media only screen and (min-width: 600px) {
   .works {
     padding: 5px 118px 0 118px;
     font-family: 'Crete Round', serif;
-
   }
 
   .works-container {
@@ -511,7 +509,7 @@ header {
     align-items: flex-start;
     justify-content: center;
   }
-  
+
   .multiporpuse img {
     margin: 0;
     min-width: 684px;
@@ -548,9 +546,10 @@ header {
   }
 
   .seeproject {
-    background-color: #F55800;
+    background-color: #f55800;
     line-height: 24px;
   }
+
   .aboutme-profile {
     padding: 0 142px 9px 142px;
     background-image: url(assets/group.png);
@@ -576,7 +575,7 @@ header {
   .multi-line {
     margin: 0;
   }
-  
+
   .list-container {
     padding: 141px;
   }
@@ -596,20 +595,20 @@ header {
   }
 
   .form-container {
-    flex-wrap:nowrap
+    flex-wrap: nowrap;
   }
-  
+
   .form-title {
     text-align: left;
     margin-left: 135px;
     margin-right: 24px;
     max-width: 455px;
   }
-  
+
   .form-container form {
     margin-right: 120px;
   }
-  
+
   .button-container {
     justify-content: flex-start;
   }
@@ -618,4 +617,3 @@ header {
     display: none;
   }
 }
-
