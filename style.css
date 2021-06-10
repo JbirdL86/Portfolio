@@ -255,7 +255,7 @@ header {
 }
 
 .streched:hover {
-  border: 2px solid blue;
+  border: 2px solid black;
 }
 
 .aboutme-container {
@@ -441,14 +441,6 @@ header {
   border: none;
 }
 
-.button-container button:hover {
-  color: #ff6b00;
-  background-color: #fff5e1;
-  border: 1px solid #ff6b00;
-  transition: 0.4s;
-  cursor: pointer;
-}
-
 .bottom-nav {
   display: flex;
   flex-direction: column;
@@ -481,6 +473,23 @@ header {
 }
 
 @media only screen and (min-width: 600px) {
+  button:enabled {
+    background-color: #f55800;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-color: #fff5e1;
+    border: 1px solid #f55800;
+    color: #f55800;
+  }
+  
+  .button:focus {
+    background-color: #e05304;
+    cursor: pointer;
+    color: #f4f1f0;
+  }
+
   .works {
     padding: 5px 118px 0 118px;
     font-family: 'Crete Round', serif;
@@ -488,7 +497,7 @@ header {
 
   .works-container {
     padding: 0 23px 0 25px;
-    margin-bottom: 130px;
+    margin-bottom: 106px;
   }
 
   .work-title {
@@ -566,6 +575,26 @@ header {
     background-size: 100% 100%;
   }
 
+  .left-img:hover {
+    background-image: url(assets/lefthover.png);
+  }
+
+  .item:hover .item-container h2 {
+    display: none;
+  }
+
+  .item:hover .item-container p {
+    display: none;
+  }
+
+  .item:hover .item-container .works-buttons {
+    display: none;
+  }
+
+  .item:hover .item-container .streched{
+    display: block;
+  }
+
   .mid-img {
     background-image: url(assets/midimg.png);
     background-size: 100% 100%;
@@ -594,6 +623,7 @@ header {
 
   .streched {
     display: none;
+    margin-top: 240px;
   }
 
   .aboutme-profile {
