@@ -119,7 +119,7 @@ header {
   flex-direction: column;
 }
 
-.works > h1 {
+.work-title > h2 {
   font-family: 'Crete Round', serif;
   font-size: 40px;
   font-style: normal;
@@ -143,14 +143,14 @@ header {
   margin: 24px 0;
 }
 
-.multiporpuse > h2 {
+.multiporpuse-right > h2 {
   font-family: 'Crete Round', serif;
   font-size: 32px;
   line-height: 44px;
   color: #091e42;
 }
 
-.multiporpuse > p {
+.multiporpuse-right > p {
   font-family: 'Inter', sans-serif;
   margin: 12px 0;
 }
@@ -186,7 +186,7 @@ header {
   font-weight: bold;
 }
 
-.works-container {
+.works-grid {
   display: grid;
   grid-template-rows: auto auto auto auto auto auto;
   grid-template-columns: 100%;
@@ -319,9 +319,6 @@ header {
 }
 
 .list-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
   padding: 0 24px;
 }
@@ -337,6 +334,7 @@ header {
   font-weight: bold;
   font-size: 32px;
   line-height: 44px;
+  margin-right: 26px;
 }
 
 .list-profile > img {
@@ -357,23 +355,25 @@ header {
 .form-container {
   padding: 120px 24px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .form-container form {
   width: 100%;
-  margin-right: 120px;
 }
 
 .form-title {
-  text-align: left;
-  width: 485px;
-  margin-left: 135px;
-  margin-right: 24px;
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
   line-height: 52px;
+  text-align: center;
+  margin-bottom: 73px;
+  height: 216px;
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
 }
 
 .form-title h3 {
@@ -427,6 +427,7 @@ header {
 .button-container {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .button-container button {
@@ -455,8 +456,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 72px;
-  width: 100%;
   border-top: 1px solid #dfe1e6;
   margin-bottom: 8px;
 }
@@ -483,29 +482,140 @@ header {
   border-radius: 10px;
 }
 
-@media only screen and (max-width: 700px) {
-  .form-container {
-    flex-wrap: wrap;
+@media only screen and (min-width: 600px){
+
+  .works {
+    padding: 5px 118px 0 118px;
+    font-family: 'Crete Round', serif;
+
   }
 
-  .form-container form {
-    margin-right: 0;
+  .works-container {
+    padding: 0 23px 0 25px;
   }
 
-  .form-title {
-    text-align: center;
-    margin-bottom: 73px;
-    height: 216px;
-    margin-left: 0;
-    margin-right: 0;
-    overflow: hidden;
-  }
-
-  .name {
-    background-color: white;
-  }
-
-  .button-container {
+  .work-title {
+    display: flex;
+    margin: 130px 12.5px 114px 10.5px;
     justify-content: center;
   }
+
+  .multi-title {
+    width: 794px;
+    margin-left: 24px;
+  }
+
+  .multiporpuse {
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .multiporpuse img {
+    margin: 0;
+    min-width: 684px;
+    min-height: 448px;
+  }
+
+  .multiporpuse-right {
+    margin: 0 0 24px 24px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .multiporpuse-right h2 {
+    font-size: 40px;
+    line-height: 52px;
+  }
+
+  .multiporpuse-right p {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: normal;
+    font-style: normal;
+    margin: 24px 0;
+  }
+
+  .textgrid {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  .button-grid {
+    margin-bottom: 24px;
+  }
+
+  .seeproject {
+    background-color: #F55800;
+    line-height: 24px;
+  }
+  .aboutme-profile {
+    padding: 0 142px 9px 142px;
+    background-image: url(assets/group.png);
+    background-position: 100% 75%;
+    background-repeat: no-repeat;
+  }
+
+  .aboutme-profile div {
+    margin-right: 734px;
+    margin-top: 142px;
+    padding-right: 520px;
+  }
+
+  .aboutme-profile > div > * {
+    margin: 24px 0;
+  }
+
+  .context {
+    font-size: 20px;
+    padding-bottom: 24px;
+  }
+
+  .multi-line {
+    margin: 0;
+  }
+  
+  .list-container {
+    padding: 141px;
+  }
+
+  .languages-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 164px;
+  }
+
+  .list-profile {
+    justify-content: flex-start;
+  }
+
+  .languages {
+    text-align: left;
+  }
+
+  .form-container {
+    flex-wrap:nowrap
+  }
+  
+  .form-title {
+    text-align: left;
+    margin-left: 135px;
+    margin-right: 24px;
+    max-width: 455px;
+  }
+  
+  .form-container form {
+    margin-right: 120px;
+  }
+  
+  .button-container {
+    justify-content: flex-start;
+  }
+
+  .bottom-nav::after {
+    display: none;
+  }
 }
+
