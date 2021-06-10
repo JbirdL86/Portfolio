@@ -59,9 +59,8 @@ header {
   background-repeat: no-repeat;
 }
 
-.item > * {
-  margin-left: 16px;
-  margin-right: 16px;
+.item-container > * {
+  margin: 0 16px;
 }
 
 .aboutme-container > * {
@@ -166,7 +165,7 @@ header {
   border: 1px solid #8993a4;
   font-family: 'Inter', sans-serif;
   padding: 10px 12px;
-  margin: 12px 0;
+  margin: 12px 0 22px 0;
   background: rgba(255, 255, 255, 0.24);
 }
 
@@ -195,7 +194,7 @@ header {
 }
 
 .item {
-  background-image: url(assets/lineargradient.png);
+  background-image: url(assets/leftimg.png);
   background-size: 100% auto;
   background-repeat: no-repeat;
   display: flex;
@@ -208,7 +207,7 @@ header {
   padding: 24px;
 }
 
-.item > h2 {
+.item-container > h2 {
   font-family: 'Crete Round', serif;
   font-style: normal;
   font-weight: normal;
@@ -218,7 +217,7 @@ header {
   color: #fff;
 }
 
-.item > p {
+.item-container > p {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -252,7 +251,7 @@ header {
   font-weight: bold;
   width: 100%;
   text-align: center;
-  margin: 12px 0;
+  margin: 0;
 }
 
 .streched:hover {
@@ -260,13 +259,12 @@ header {
 }
 
 .aboutme-container {
-  background: #1c1a19;
+  background: #262626;
   width: 100%;
   padding-bottom: 120px;
 }
 
 .aboutme-profile {
-  background-color: #1c1a19;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -490,6 +488,7 @@ header {
 
   .works-container {
     padding: 0 23px 0 25px;
+    margin-bottom: 130px;
   }
 
   .work-title {
@@ -550,6 +549,53 @@ header {
     line-height: 24px;
   }
 
+  .works-grid {
+    margin: 24px 0;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 24px;
+  }
+
+  .item {
+    margin: 0;
+    min-width: 369px;
+    min-height: 435px;
+  }
+
+  .left-img {
+    background-image: url(assets/leftimg.png);
+    background-size: 100% 100%;
+  }
+
+  .mid-img {
+    background-image: url(assets/midimg.png);
+    background-size: 100% 100%;
+  }
+
+  .right-img {
+    background-image: url(assets/rightimg.png);
+    background-size: 100% 100%;
+  }
+
+  .item-container {
+    margin-top: 170px;
+  }
+
+  .item-container h2 {
+    margin-top: 8px;
+  }
+
+  .works-buttons {
+    margin-bottom: 16px;
+  }
+
+  .item-container p {
+    margin: 24px 16px;
+  }
+
+  .streched {
+    display: none;
+  }
+
   .aboutme-profile {
     padding: 0 142px 9px 142px;
     background-image: url(assets/group.png);
@@ -558,9 +604,8 @@ header {
   }
 
   .aboutme-profile div {
-    margin-right: 734px;
+    margin-right: 560px;
     margin-top: 142px;
-    padding-right: 520px;
   }
 
   .aboutme-profile > div > * {
