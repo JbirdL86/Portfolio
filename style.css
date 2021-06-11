@@ -643,6 +643,10 @@ header {
     background-image: url(assets/lefthover.png);
   }
 
+  .item:hover {
+    transform: scale(1.1, 1.1);
+  }
+
   .item-container h2 {
     margin-top: 8px;
   }
