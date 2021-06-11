@@ -486,13 +486,13 @@ header {
     border: 1px solid #f55800;
     color: #f55800;
   }
-  
+
   .button:focus {
     background-color: #e05304;
     cursor: pointer;
     color: #f4f1f0;
   }
-  
+
   .navbar {
     padding: 0 151px;
     height: 72px;
@@ -506,7 +506,6 @@ header {
     display: flex;
     justify-content: space-between;
     width: 255px;
-  
   }
 
   .nav-menu a {
@@ -533,7 +532,7 @@ header {
   }
 
   .profesion {
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
@@ -542,12 +541,13 @@ header {
   }
 
   .context {
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
     line-height: 32px;
     margin-bottom: 192px;
+    padding-bottom: 24px;
   }
 
   .social {
@@ -643,6 +643,27 @@ header {
     background-image: url(assets/lefthover.png);
   }
 
+  .item-container h2 {
+    margin-top: 8px;
+  }
+
+  .works-buttons {
+    margin-bottom: 16px;
+  }
+
+  .item-container {
+    margin-top: 170px;
+  }
+
+  .item-container p {
+    margin: 24px 16px;
+  }
+
+  .streched {
+    display: none;
+    margin-top: 240px;
+  }
+
   .item:hover .item-container h2 {
     display: none;
   }
@@ -655,7 +676,7 @@ header {
     display: none;
   }
 
-  .item:hover .item-container .streched{
+  .item:hover .item-container .streched {
     display: block;
   }
 
@@ -667,27 +688,6 @@ header {
   .right-img {
     background-image: url(assets/rightimg.png);
     background-size: 100% 100%;
-  }
-
-  .item-container {
-    margin-top: 170px;
-  }
-
-  .item-container h2 {
-    margin-top: 8px;
-  }
-
-  .works-buttons {
-    margin-bottom: 16px;
-  }
-
-  .item-container p {
-    margin: 24px 16px;
-  }
-
-  .streched {
-    display: none;
-    margin-top: 240px;
   }
 
   .aboutme-profile {
@@ -704,11 +704,6 @@ header {
 
   .aboutme-profile > div > * {
     margin: 24px 0;
-  }
-
-  .context {
-    font-size: 20px;
-    padding-bottom: 24px;
   }
 
   .multi-line {
