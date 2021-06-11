@@ -49,6 +49,11 @@ header {
   font-size: 18px;
   line-height: 24px;
   align-self: center;
+  transition: transform 2s;
+}
+
+.profile:hover {
+  transform: rotate(360deg);
 }
 
 .introduction {
