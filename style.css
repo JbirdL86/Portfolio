@@ -31,6 +31,10 @@ header {
   padding: 0 24px;
 }
 
+.nav-menu {
+  display: none;
+}
+
 .navbar > * {
   color: white;
 }
@@ -72,13 +76,8 @@ header {
   flex-direction: column;
 }
 
-.introduction > div > * {
-  margin: 12px 0;
-}
-
 .presentation {
   color: #ff6b00;
-  margin-top: 120px;
   font-size: 56px;
   font-weight: normal;
   font-style: normal;
@@ -87,6 +86,7 @@ header {
   letter-spacing: 0.37px;
   order: 0;
   flex-grow: 0;
+  margin-bottom: 12px;
 }
 
 .profesion {
@@ -97,6 +97,7 @@ header {
   font-family: 'Roboto', sans-serif;
   order: 1;
   flex-grow: 0;
+  margin-bottom: 12px;
 }
 
 .context {
@@ -104,11 +105,13 @@ header {
   order: 2;
   flex-grow: 0;
   font-family: 'Poppins', sans-serif;
+  margin-bottom: 12px;
 }
 
 .social {
   color: white;
   display: flex;
+  margin-top: 10px;
 }
 
 .works {
@@ -488,6 +491,67 @@ header {
     background-color: #e05304;
     cursor: pointer;
     color: #f4f1f0;
+  }
+  
+  .navbar {
+    padding: 0 151px;
+    height: 72px;
+  }
+
+  .mobicon {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 255px;
+  
+  }
+
+  .nav-menu a {
+    color: #fff;
+  }
+
+  .introduction {
+    flex-direction: row-reverse;
+    align-items: center;
+    background-image: url(assets/Illustration-header.png);
+    background-position: 100% 30%;
+    padding: 0 0 0 36px;
+  }
+
+  .intro-container {
+    margin: 0 731px 19px 87px;
+  }
+
+  .presentation {
+    font-size: 72px;
+    line-height: 81px;
+    color: #f55800;
+    margin-top: 192px;
+  }
+
+  .profesion {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 44px;
+    margin: 24px 0;
+  }
+
+  .context {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 192px;
+  }
+
+  .social {
+    flex-direction: column;
   }
 
   .works {
