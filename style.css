@@ -49,6 +49,11 @@ header {
   font-size: 18px;
   line-height: 24px;
   align-self: center;
+  transition: transform 2s;
+}
+
+.profile:hover {
+  transform: rotate(360deg);
 }
 
 .introduction {
@@ -644,6 +649,10 @@ header {
     background-image: url(assets/lefthover.png);
   }
 
+  .item:hover {
+    transform: scale(1.1, 1.1);
+  }
+
   .item-container h2 {
     margin-top: 8px;
   }
@@ -752,5 +761,22 @@ header {
 
   .bottom-nav::after {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 1441px) {
+  body {
+    background-color: darkgrey;
+  }
+
+  header {
+    max-width: 1441px;
+    margin: 0 auto;
+  }
+
+  main {
+    max-width: 1441px;
+    margin: 0 auto;
+    background-color: #fff;
   }
 }
