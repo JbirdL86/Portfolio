@@ -13,9 +13,9 @@
 - HTML
 - CSS
 
-## Live Demo
+## Online version
 
-[Live Demo Link](https://rawcdn.githack.com/JbirdL86/Portfolio/c34ecc97cc8f533e1d5a3ecd9a8bc20db8c9fa6a/index.html)
+[Online Version Link](https://jbirdl86.github.io/Portfolio/)
 
 
 ## Authors
