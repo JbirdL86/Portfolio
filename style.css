@@ -174,7 +174,7 @@ header {
   font-family: 'Inter', sans-serif;
   padding: 10px 12px;
   margin: 12px 0 22px 0;
-  background: rgba(255, 255, 255, 0.24);
+  background-color: rgba(100, 100, 100, 1);
 }
 
 .textgrid:hover {
@@ -182,7 +182,7 @@ header {
 }
 
 .seeproject {
-  background-color: #C15206;
+  background-color: #c15206;
   grid-column: 1/3;
   padding: 12px;
   color: #fff;
@@ -202,7 +202,7 @@ header {
 }
 
 .item {
-  background-image: url(assets/leftimg.png);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 1));
   background-size: 100% auto;
   background-repeat: no-repeat;
   display: flex;
@@ -222,7 +222,7 @@ header {
   font-size: 32px;
   line-height: 44px;
   margin-top: 84px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .item-container > p {
@@ -294,6 +294,7 @@ header {
 
 .aboutme {
   color: #ff6b00;
+  background-color: #262626;
   margin-top: 120px;
   font-size: 72px;
   font-weight: normal;
@@ -482,14 +483,14 @@ header {
 
 @media only screen and (min-width: 993px) {
   button:enabled {
-    background-color: #f55800;
+    background-color: #d7410b;
   }
 
   button:hover {
     cursor: pointer;
     background-color: #fff5e1;
     border: 1px solid #f55800;
-    color: #f55800;
+    color: #d7410b;
   }
 
   .button:focus {
@@ -527,6 +528,7 @@ header {
 
   .intro-container {
     margin: 0 731px 19px 87px;
+    background-color: #1c1a19;
   }
 
   .presentation {
@@ -546,6 +548,7 @@ header {
   }
 
   .context {
+    background-color: #262626;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -620,10 +623,11 @@ header {
 
   .button-grid {
     margin-bottom: 24px;
+    color: #fff;
   }
 
   .seeproject {
-    background-color: #f55800;
+    background-color: #d7410b;
     line-height: 24px;
   }
 
@@ -654,6 +658,8 @@ header {
 
   .item-container h2 {
     margin-top: 8px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(100, 100, 100, 1);
   }
 
   .works-buttons {
@@ -666,6 +672,7 @@ header {
 
   .item-container p {
     margin: 24px 16px;
+    background-color: rgba(100, 100, 100, 1);
   }
 
   .streched {
