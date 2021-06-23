@@ -82,7 +82,8 @@ header {
 }
 
 .presentation {
-  color: #ff6b00;
+  color: #c15206;
+  background-color: #1c1a19;
   font-size: 56px;
   font-weight: normal;
   font-style: normal;
@@ -96,6 +97,7 @@ header {
 
 .profesion {
   color: #fff5e1;
+  background-color: #1c1a19;
   font-size: 24px;
   font-style: normal;
   font-weight: bold;
@@ -107,6 +109,7 @@ header {
 
 .context {
   color: #fff;
+  background-color: #1c1a19;
   order: 2;
   flex-grow: 0;
   font-family: 'Poppins', sans-serif;
@@ -167,6 +170,7 @@ header {
   grid-template-columns: auto auto auto auto;
   grid-gap: 0 12px;
   justify-content: flex-start;
+  color: #fff;
 }
 
 .textgrid {
@@ -223,6 +227,7 @@ header {
   line-height: 44px;
   margin-top: 84px;
   color: #fff;
+  background-color:rgba(100, 100, 100, 1);
 }
 
 .item-container > p {
@@ -232,6 +237,7 @@ header {
   font-size: 16px;
   line-height: 24px;
   color: #fff;
+  background-color:rgba(100, 100, 100, 1);
 }
 
 .works-buttons {
@@ -249,7 +255,7 @@ header {
 }
 
 .streched {
-  background-color: #ff6b00;
+  background-color: #c15206;
   padding: 12px;
   color: #fff;
   letter-spacing: 0.03em;
@@ -314,7 +320,7 @@ header {
   line-height: 24px;
   letter-spacing: 0.03em;
   color: #fff;
-  background: #ff6b00;
+  background: #c15206;
   padding: 12px;
 }
 
@@ -438,7 +444,7 @@ header {
 }
 
 .button-container button {
-  background-color: #ff6b00;
+  background-color: #c15206;
   padding: 12px;
   color: #fff;
   letter-spacing: 0.03em;
@@ -534,7 +540,7 @@ header {
   .presentation {
     font-size: 72px;
     line-height: 81px;
-    color: #f55800;
+    color: #c15206;
     margin-top: 192px;
   }
 
