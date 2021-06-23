@@ -227,7 +227,7 @@ header {
   line-height: 44px;
   margin-top: 84px;
   color: #fff;
-  background-color:rgba(100, 100, 100, 1);
+  background-color: rgba(100, 100, 100, 1);
 }
 
 .item-container > p {
@@ -237,7 +237,7 @@ header {
   font-size: 16px;
   line-height: 24px;
   color: #fff;
-  background-color:rgba(100, 100, 100, 1);
+  background-color: rgba(100, 100, 100, 1);
 }
 
 .works-buttons {
