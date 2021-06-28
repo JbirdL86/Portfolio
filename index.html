@@ -32,11 +32,17 @@
                     <li>
                         <a href="#form-container">Contact</a>
                     </li>
-                    <li>
+                    <li class="hideEnvelope">
                         <i class="far fa-envelope"></i>
                     </li>
+                    <li>
+                        <a class="closeIcon">X</a>
+                    </li>
                 </ul>
-                <a class="mobicon" aria-label="Navigation button" href="#"><i class="fas fa-bars"></i></a>
+                <a class="openIcon" aria-label="Navigation button" href="#"><i class="fas fa-bars"></i></a>
+                <div class="navHidden">
+                    <div class="navBorder"></div>
+                </div>
             </nav>
         </header>
         <main>
@@ -263,5 +269,6 @@
                 </ul>
             </section>
         </main>
+        <script src="nav.js" type="text/javascript"></script>
     </body>
 </html>
