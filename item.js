@@ -10,6 +10,7 @@ function Item(id, name, description, featureImg, tech, liveLink, srcLink) {
 
 const myItems = [];
 const myTech = ['html', 'css', 'Ruby'];
+const multiTech = ['css', 'html', 'bootstrap', 'Ruby'];
 
 function createRow() {
   for (let i = 0; i < 3; i += 1) {
@@ -29,15 +30,84 @@ function createRow() {
   }
 }
 
+function createMultiPost() {
+  const multiPost = new Item('multiporpuse', 'Multi-Post Stories', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.', '/assets/ImgPlaceholder.png', multiTech, null, null);
+  const multiButton = document.querySelector('.seeproject');
+
+  multiButton.addEventListener('click', () => {
+    const works = document.getElementById('works');
+    const popup = document.createElement('article');
+    const wrapDiv = document.createElement('div');
+    const closeIconContainer = document.createElement('div');
+    const closeIcon = document.createElement('a');
+    const featureContainer = document.createElement('div');
+    const featureImg = document.createElement('img');
+    const buttonContainer = document.createElement('div');
+    const featureText = document.createElement('p');
+    const liveButton = document.createElement('button');
+    const srcButton = document.createElement('button');
+    const featureTextContainer = document.createElement('div');
+    const popuph2 = document.createElement('h2');
+    const popupUl = document.createElement('ul');
+
+    featureText.textContent = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.';
+    featureImg.src = multiPost.featureImg;
+    closeIcon.textContent = 'X';
+    closeIcon.style.cursor = 'pointer';
+    liveButton.style.cursor = 'pointer';
+    srcButton.style.cursor = 'pointer';
+    liveButton.value = 'See Live';
+    srcButton.value = 'See Source';
+    liveButton.textContent = 'See Live';
+    srcButton.textContent = 'See Source';
+    popuph2.textContent = multiPost.name;
+    popupUl.classList.add('popTech');
+    
+    for(let i =0; i < multiPost.tech.length; i += 1){
+      const li = document.createElement('li');
+      li.textContent = multiPost.tech[i];
+      li.classList.add('popTech');
+      popupUl.appendChild(li);
+    }
+
+    closeIconContainer.classList.add('closePopupContainer');
+    featureContainer.classList.add('feature-container');
+    popup.classList.add('popup');
+    liveButton.classList.add('popupButtons');
+    srcButton.classList.add('popupButtons');
+    wrapDiv.classList.add('popupWrapper');
+    buttonContainer.classList.add('buttonContainer');
+    featureTextContainer.classList.add('featureTextContainer');
+
+    closeIconContainer.appendChild(popuph2);
+    closeIconContainer.appendChild(closeIcon);
+    featureContainer.appendChild(featureImg);
+    featureContainer.appendChild(featureTextContainer);
+    featureTextContainer.appendChild(featureText);
+    featureTextContainer.appendChild(buttonContainer);
+    buttonContainer.appendChild(liveButton);
+    buttonContainer.appendChild(srcButton);
+    wrapDiv.appendChild(closeIconContainer);
+    wrapDiv.appendChild(popupUl);
+    wrapDiv.appendChild(featureContainer);
+    popup.appendChild(wrapDiv);
+    works.appendChild(popup);
+    closeIcon.addEventListener('click', () => {
+      popup.style.display = 'none';
+    });
+  });
+}
+
 function createNumberOfRows(numberOfRows) {
   for (let i = 0; i < numberOfRows; i += 1) {
     createRow();
   }
 }
 
-const worksCont = document.querySelector('#works-grid');
 
 function createHtmlForItem(myItems) {
+  const worksCont = document.querySelector('#works-grid');
+
   for (let i = 0; i < myItems.length; i += 1) {
     const article = document.createElement('article');
     const div = document.createElement('div');
@@ -52,7 +122,7 @@ function createHtmlForItem(myItems) {
       const li = document.createElement('li');
 
       li.textContent = myItems[i].tech[j];
-      li.classList.add('textgrid');
+     // li.classList.add('textgrid');
       ulTech.appendChild(li);
     }
     p.textContent = myItems[i].description;
@@ -75,6 +145,8 @@ function createHtmlForItem(myItems) {
       const liveButton = document.createElement('button');
       const srcButton = document.createElement('button');
       const featureTextContainer = document.createElement('div');
+      const popuph2 = document.createElement('h2');
+      const popupUl = document.createElement('ul');
 
       featureText.textContent = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.';
       featureImg.src = featureImgSrc;
@@ -86,6 +158,9 @@ function createHtmlForItem(myItems) {
       srcButton.value = 'See Source';
       liveButton.textContent = 'See Live';
       srcButton.textContent = 'See Source';
+      popuph2.innerHTML = h2.innerHTML;
+      popupUl.innerHTML = ulTech.innerHTML;
+      popupUl.classList = 'popTech';
 
       closeIconContainer.classList.add('closePopupContainer');
       featureContainer.classList.add('feature-container');
@@ -96,7 +171,7 @@ function createHtmlForItem(myItems) {
       buttonContainer.classList.add('buttonContainer');
       featureTextContainer.classList.add('featureTextContainer');
 
-      closeIconContainer.appendChild(h2);
+      closeIconContainer.appendChild(popuph2);
       closeIconContainer.appendChild(closeIcon);
       featureContainer.appendChild(featureImg);
       featureContainer.appendChild(featureTextContainer);
@@ -105,7 +180,7 @@ function createHtmlForItem(myItems) {
       buttonContainer.appendChild(liveButton);
       buttonContainer.appendChild(srcButton);
       wrapDiv.appendChild(closeIconContainer);
-      wrapDiv.appendChild(ulTech);
+      wrapDiv.appendChild(popupUl);
       wrapDiv.appendChild(featureContainer);
       popup.appendChild(wrapDiv);
       works.appendChild(popup);
@@ -123,5 +198,7 @@ function createHtmlForItem(myItems) {
   }
 }
 
+
 createNumberOfRows(2);
+createMultiPost();
 createHtmlForItem(myItems);

@@ -311,13 +311,25 @@ header {
   justify-content: space-between;
 }
 
+.popTech {
+  display: flex;
+  margin-top: 20px;
+}
+
+.popTech > li {
+  border: 1px solid #8993a4;
+  font-family: 'Inter', sans-serif;
+  padding: 10px 12px;
+  margin: 12px 12px 22px 0;
+}
+
 .feature-container {
   display: flex;
   flex-direction: column;
 }
 
 .feature-container > img {
-  height: 220px;
+  height: 40vh;
   margin: 20px 0;
 }
 
@@ -805,6 +817,7 @@ header {
   .popup {
     position: fixed;
     min-width: 1156px;
+    min-height: 408px;
     height: 65vh;
     top: 20vh;
     background-color: white;
@@ -819,7 +832,7 @@ header {
   }
 
   .feature-container > img {
-    height: 448px;
+    height: 40vh;
     min-width: 659px;
     margin: 0 20px 0 0;
   }
