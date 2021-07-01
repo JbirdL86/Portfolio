@@ -62,8 +62,7 @@ function createMultiPost() {
     srcButton.textContent = 'See Source';
     popuph2.textContent = multiPost.name;
     popupUl.classList.add('popTech');
-    
-    for(let i =0; i < multiPost.tech.length; i += 1){
+    for (let i = 0; i < multiPost.tech.length; i += 1) {
       const li = document.createElement('li');
       li.textContent = multiPost.tech[i];
       li.classList.add('popTech');
@@ -104,7 +103,6 @@ function createNumberOfRows(numberOfRows) {
   }
 }
 
-
 function createHtmlForItem(myItems) {
   const worksCont = document.querySelector('#works-grid');
 
@@ -122,7 +120,6 @@ function createHtmlForItem(myItems) {
       const li = document.createElement('li');
 
       li.textContent = myItems[i].tech[j];
-     // li.classList.add('textgrid');
       ulTech.appendChild(li);
     }
     p.textContent = myItems[i].description;
@@ -197,7 +194,6 @@ function createHtmlForItem(myItems) {
     worksCont.appendChild(article);
   }
 }
-
 
 createNumberOfRows(2);
 createMultiPost();
