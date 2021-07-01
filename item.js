@@ -16,22 +16,22 @@ function createRow() {
   for (let i = 0; i < 3; i += 1) {
     let myItem;
     if (i === 0) {
-      myItem = new Item('left-img', 'Profesional Art Printing Data More', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry standard', '/assets/leftimg.png', myTech, 'jbirdL86.github.com/Portfolio', 'https://github.com/JbirdL86/Portfolio');
+      myItem = new Item('left-img', 'Profesional Art Printing Data More', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry standard', 'assets/leftimg.png', myTech, 'jbirdL86.github.com/Portfolio', 'https://github.com/JbirdL86/Portfolio');
       myItems.push(myItem);
     }
     if (i === 1) {
-      myItem = new Item('mid-img', 'Data DashboardHealthcare', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard', '/assets/midimg.png', myTech, null, null);
+      myItem = new Item('mid-img', 'Data DashboardHealthcare', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard', 'assets/midimg.png', myTech, null, null);
       myItems.push(myItem);
     }
     if (i === 2) {
-      myItem = new Item('right-img', 'Website Protfolio', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard', '/assets/rightimg.png', myTech, null, null);
+      myItem = new Item('right-img', 'Website Protfolio', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard', 'assets/rightimg.png', myTech, null, null);
       myItems.push(myItem);
     }
   }
 }
 
 function createMultiPost() {
-  const multiPost = new Item('multiporpuse', 'Multi-Post Stories', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.', '/assets/ImgPlaceholder.png', multiTech, null, null);
+  const multiPost = new Item('multiporpuse', 'Multi-Post Stories', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.', 'assets/ImgPlaceholder.png', multiTech, null, null);
   const multiButton = document.querySelector('.seeproject');
 
   multiButton.addEventListener('click', () => {
