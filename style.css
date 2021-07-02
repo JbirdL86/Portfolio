@@ -244,7 +244,7 @@ header {
   color: #fff;
 }
 
-.textgrid {
+.button-grid > li {
   border: 1px solid #8993a4;
   font-family: 'Inter', sans-serif;
   padding: 10px 12px;
@@ -252,8 +252,28 @@ header {
   background-color: rgba(100, 100, 100, 1);
 }
 
-.textgrid:hover {
+.popTech > li {
+  border: 1px solid #8993a4;
+  font-family: 'Inter', sans-serif;
+  padding: 10px 12px;
+  margin: 12px 12px 22px 0;
+}
+
+.works-buttons > li {
+  border: 1px solid #8993a4;
+  font-family: 'Inter', sans-serif;
+  padding: 10px 12px;
+  margin: 12px 0 22px 0;
+  background-color: rgba(100, 100, 100, 1);
+}
+
+.languages > li {
+  margin: 30px 0;
+}
+
+.button-grid > li:hover {
   border: 2px solid blue;
+  cursor: pointer;
 }
 
 .seeproject {
@@ -266,6 +286,7 @@ header {
   font-size: 17px;
   font-style: normal;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .works-grid {
@@ -314,13 +335,6 @@ header {
 .popTech {
   display: flex;
   margin-top: 20px;
-}
-
-.popTech > li {
-  border: 1px solid #8993a4;
-  font-family: 'Inter', sans-serif;
-  padding: 10px 12px;
-  margin: 12px 12px 22px 0;
 }
 
 .feature-container {
@@ -502,10 +516,6 @@ header {
 
 .languages {
   text-align: center;
-}
-
-.languages > li {
-  margin: 30px 0;
 }
 
 .form-container {
@@ -777,26 +787,33 @@ header {
     margin: 24px 0;
   }
 
-  .textgrid {
-    font-size: 15px;
-    line-height: 20px;
-    margin: 0;
-  }
-
   .button-grid {
     margin-bottom: 24px;
     color: #fff;
   }
 
+  .button-grid > li {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+  }
+
   .seeproject {
     background-color: #d7410b;
     line-height: 24px;
+    cursor: pointer;
   }
 
   .works-grid {
     margin: 24px 0;
     grid-template-columns: auto auto auto;
     grid-column-gap: 24px;
+  }
+
+  .works-grid > li {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
   }
 
   #works-grid {
