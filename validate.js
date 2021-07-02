@@ -1,7 +1,6 @@
 const submitButton = document.getElementById('submit');
 const email = document.getElementById('mail');
 
-email.value = 'FErnando@gmail.com';
 submitButton.addEventListener('click', () => {
   const emailString = email.value;
 
