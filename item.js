@@ -9,7 +9,7 @@ function Item(id, name, description, featureImg, tech, liveLink, srcLink) {
 }
 
 const myItems = [];
-const myTech = ['html', 'css', 'Ruby'];
+const myTech = ['html', 'css', 'JavaScript'];
 const multiTech = ['css', 'html', 'bootstrap', 'Ruby'];
 
 function createRow() {
@@ -28,6 +28,7 @@ function createRow() {
       myItems.push(myItem);
     }
   }
+  myItems[0] = new Item('assets/todolist1.png', 'To Do List', 'A very usefull tool to organize your daily tasks; No accounts or sign-ups required. Just load and use', 'assets/todolist1.png', ['HTML','CSS', 'JavaScript'],'https://jbirdl86.github.io/webpack-project/dist/', 'https://github.com/JbirdL86/webpack-project');
 }
 
 function createMultiPost() {
@@ -115,6 +116,10 @@ function createHtmlForItem(myItems) {
     const button = document.createElement('button');
     const featureImgSrc = myItems[i].featureImg;
 
+    if(myItems[i].id !== 'left-img' && myItems[i].id !== 'mid-img' && myItems[i].id !== 'right-img') {
+      article.style.backgroundImage = 'url(' + myItems[i].id + ' )';
+      article.style.backgroundSize = "100% 100%";
+    }
     article.classList.add(myItems[i].id);
     for (let j = 0; j < myItems[j].tech.length; j += 1) {
       const li = document.createElement('li');
@@ -144,12 +149,18 @@ function createHtmlForItem(myItems) {
       const featureTextContainer = document.createElement('div');
       const popuph2 = document.createElement('h2');
       const popupUl = document.createElement('ul');
+      const linklive = document.createElement('a');
+      const linkSrc = document.createElement('a');
 
       featureText.textContent = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.';
       featureImg.src = featureImgSrc;
       closeIcon.textContent = 'X';
       closeIcon.style.cursor = 'pointer';
+      linklive.href = myItems[i].liveLink;
+      linklive.target = "_blank";
       liveButton.style.cursor = 'pointer';
+      linkSrc.href = myItems[i].srcLink;
+      linkSrc.target = "_blank";
       srcButton.style.cursor = 'pointer';
       liveButton.value = 'See Live';
       srcButton.value = 'See Source';
@@ -174,8 +185,10 @@ function createHtmlForItem(myItems) {
       featureContainer.appendChild(featureTextContainer);
       featureTextContainer.appendChild(featureText);
       featureTextContainer.appendChild(buttonContainer);
-      buttonContainer.appendChild(liveButton);
-      buttonContainer.appendChild(srcButton);
+      linklive.appendChild(liveButton);
+      buttonContainer.appendChild(linklive);
+      linkSrc.appendChild(srcButton);
+      buttonContainer.appendChild(linkSrc);
       wrapDiv.appendChild(closeIconContainer);
       wrapDiv.appendChild(popupUl);
       wrapDiv.appendChild(featureContainer);

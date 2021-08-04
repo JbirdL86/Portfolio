@@ -222,6 +222,7 @@ header {
 
 .multiporpuse > img {
   margin: 24px 0;
+  width: 100%;
 }
 
 .multiporpuse-right > h2 {
@@ -237,17 +238,15 @@ header {
 }
 
 .button-grid {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 0 12px;
-  justify-content: flex-start;
+  display: flex;
+  justify-content: space-between;
   color: #fff;
 }
 
 .button-grid > li {
   border: 1px solid #8993a4;
   font-family: 'Inter', sans-serif;
-  padding: 10px 12px;
+  padding: 3px 5px;
   margin: 12px 0 22px 0;
   background-color: rgba(100, 100, 100, 1);
 }
@@ -264,7 +263,7 @@ header {
   font-family: 'Inter', sans-serif;
   padding: 10px 12px;
   margin: 12px 0 22px 0;
-  background-color: rgba(100, 100, 100, 1);
+  background-color: rgba(100, 100, 100, 0.5);
 }
 
 .languages > li {
@@ -343,7 +342,7 @@ header {
 }
 
 .feature-container > img {
-  height: 40vh;
+  height: 25vh;
   margin: 20px 0;
 }
 
@@ -383,7 +382,7 @@ header {
   line-height: 44px;
   margin-top: 84px;
   color: #fff;
-  background-color: rgba(100, 100, 100, 1);
+  background-color: rgba(100, 100, 100, 0.5);
 }
 
 .item-container > p {
@@ -393,7 +392,7 @@ header {
   font-size: 16px;
   line-height: 24px;
   color: #fff;
-  background-color: rgba(100, 100, 100, 1);
+  background-color: rgba(100, 100, 100, 0.5);
 }
 
 .works-buttons {
@@ -878,7 +877,7 @@ header {
   .item-container h2 {
     margin-top: 8px;
     color: rgb(255, 255, 255);
-    background-color: rgba(100, 100, 100, 1);
+    background-color: rgba(100, 100, 100, 0.555);
   }
 
   .works-buttons {
@@ -891,7 +890,7 @@ header {
 
   .item-container p {
     margin: 24px 16px;
-    background-color: rgba(100, 100, 100, 1);
+    background-color: rgba(100, 100, 100, 0.5);
   }
 
   .streched {
