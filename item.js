@@ -11,7 +11,6 @@ function Item(index, id, name, description, featureImg, tech, liveLink, srcLink)
 
 const myItems = [];
 const myTech = ['html', 'css', 'JavaScript', 'bootsrap'];
-const multiTech = ['css', 'html', 'bootstrap', 'Ruby'];
 
 function createRow(index) {
   for (let i = index; i < 3 * (index + 1); i += 1) {
@@ -25,11 +24,11 @@ function createRow(index) {
       myItems.push(myItem);
     }
     if (i === index + 2) {
-      myItem = new Item(i, 'right-img', 'Website Protfolio', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard', 'assets/rightimg.png', ['HTML','BootStrap', 'JavaScript'], null, null);
+      myItem = new Item(i, 'right-img', 'Website Protfolio', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard', 'assets/rightimg.png', ['HTML', 'BootStrap', 'JavaScript'], null, null);
       myItems.push(myItem);
     }
   }
-  myItems[0] = new Item(0,'assets/todolist1.png', 'To Do List', 'A very usefull tool to organize your daily tasks; No accounts or sign-ups required. Just load and use, no login required! The to do list is helpful to organize your daily tasks in a really simple way', 'assets/todolist1.png', ['HTML','CSS', 'JavaScript'],'https://jbirdl86.github.io/webpack-project/dist/', 'https://github.com/JbirdL86/webpack-project');
+  myItems[0] = new Item(0, 'project-img', 'To Do List', 'A very usefull tool to organize your daily tasks; No accounts or sign-ups required. Just load and use, no login required! The to do list is helpful to organize your daily tasks in a really simple way', 'assets/todolist1.png', ['HTML', 'CSS', 'JavaScript'], 'https://jbirdl86.github.io/webpack-project/dist/', 'https://github.com/JbirdL86/webpack-project');
 }
 
 function createMultiPost(index) {
@@ -37,7 +36,6 @@ function createMultiPost(index) {
 
   multiButton.addEventListener('click', () => {
     const multiPost = myItems[index];
-    console.log('here')
     const works = document.getElementById('works');
     const popup = document.createElement('article');
     const wrapDiv = document.createElement('div');
@@ -54,7 +52,7 @@ function createMultiPost(index) {
     const popupUl = document.createElement('ul');
     const linklive = document.createElement('a');
     const linkSrc = document.createElement('a');
-    
+
     featureText.textContent = multiPost.description;
     featureImg.src = multiPost.featureImg;
     closeIcon.textContent = 'X';
@@ -62,10 +60,10 @@ function createMultiPost(index) {
     liveButton.style.cursor = 'pointer';
     srcButton.style.cursor = 'pointer';
     linklive.href = multiPost.liveLink;
-    linklive.target = "_blank";
+    linklive.target = '_blank';
     liveButton.value = 'See Live';
     linkSrc.href = multiPost.srcLink;
-    linkSrc.target = "_blank";
+    linkSrc.target = '_blank';
     srcButton.value = 'See Source';
     liveButton.textContent = 'See Live';
     srcButton.textContent = 'See Source';
@@ -126,10 +124,11 @@ function createHtmlForItem(myItems) {
     const button = document.createElement('button');
     const featureImgSrc = myItems[i].featureImg;
 
-    if(myItems[i].id !== 'left-img' && myItems[i].id !== 'mid-img' && myItems[i].id !== 'right-img') {
-      article.style.backgroundImage = 'url(' + myItems[i].id + ' )';
-      article.style.backgroundSize = "100% 100%";
+    if (myItems[i].id !== 'left-img' && myItems[i].id !== 'mid-img' && myItems[i].id !== 'right-img') {
+      article.style.backgroundImage = `url(${myItems[i].featureImg})`;
+      article.style.backgroundSize = '100% 100%';
     }
+
     article.classList.add(myItems[i].id);
     for (let j = 0; j < myItems[i].tech.length; j += 1) {
       const li = document.createElement('li');
@@ -167,10 +166,10 @@ function createHtmlForItem(myItems) {
       closeIcon.textContent = 'X';
       closeIcon.style.cursor = 'pointer';
       linklive.href = myItems[i].liveLink;
-      linklive.target = "_blank";
+      linklive.target = '_blank';
       liveButton.style.cursor = 'pointer';
       linkSrc.href = myItems[i].srcLink;
-      linkSrc.target = "_blank";
+      linkSrc.target = '_blank';
       srcButton.style.cursor = 'pointer';
       liveButton.value = 'See Live';
       srcButton.value = 'See Source';
