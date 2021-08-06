@@ -1,4 +1,5 @@
-function Item(id, name, description, featureImg, tech, liveLink, srcLink) {
+function Item(index, id, name, description, featureImg, tech, liveLink, srcLink) {
+  this.index = index;
   this.id = id;
   this.name = name;
   this.description = description;
@@ -9,32 +10,32 @@ function Item(id, name, description, featureImg, tech, liveLink, srcLink) {
 }
 
 const myItems = [];
-const myTech = ['html', 'css', 'Ruby'];
-const multiTech = ['css', 'html', 'bootstrap', 'Ruby'];
+const myTech = ['html', 'css', 'JavaScript', 'bootsrap'];
 
-function createRow() {
-  for (let i = 0; i < 3; i += 1) {
+function createRow(index) {
+  for (let i = index; i < 3 * (index + 1); i += 1) {
     let myItem;
-    if (i === 0) {
-      myItem = new Item('left-img', 'Profesional Art Printing Data More', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry standard', 'assets/leftimg.png', myTech, 'jbirdL86.github.com/Portfolio', 'https://github.com/JbirdL86/Portfolio');
+    if (i === index) {
+      myItem = new Item(i, 'left-img', 'Profesional Art Printing Data More', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry standard', 'assets/leftimg.png', myTech, 'jbirdL86.github.com/Portfolio', 'https://github.com/JbirdL86/Portfolio');
       myItems.push(myItem);
     }
-    if (i === 1) {
-      myItem = new Item('mid-img', 'Data DashboardHealthcare', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard', 'assets/midimg.png', myTech, null, null);
+    if (i === index + 1) {
+      myItem = new Item(i, 'mid-img', 'Data DashboardHealthcare', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard', 'assets/midimg.png', myTech, null, null);
       myItems.push(myItem);
     }
-    if (i === 2) {
-      myItem = new Item('right-img', 'Website Protfolio', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard', 'assets/rightimg.png', myTech, null, null);
+    if (i === index + 2) {
+      myItem = new Item(i, 'right-img', 'Website Protfolio', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard', 'assets/rightimg.png', ['HTML', 'BootStrap', 'JavaScript'], null, null);
       myItems.push(myItem);
     }
   }
+  myItems[0] = new Item(0, 'project-img', 'To Do List', 'A very usefull tool to organize your daily tasks; No accounts or sign-ups required. Just load and use, no login required! The to do list is helpful to organize your daily tasks in a really simple way', 'assets/todolist1.png', ['HTML', 'CSS', 'JavaScript'], 'https://jbirdl86.github.io/webpack-project/dist/', 'https://github.com/JbirdL86/webpack-project');
 }
 
-function createMultiPost() {
-  const multiPost = new Item('multiporpuse', 'Multi-Post Stories', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text.', 'assets/ImgPlaceholder.png', multiTech, null, null);
+function createMultiPost(index) {
   const multiButton = document.querySelector('.seeproject');
 
   multiButton.addEventListener('click', () => {
+    const multiPost = myItems[index];
     const works = document.getElementById('works');
     const popup = document.createElement('article');
     const wrapDiv = document.createElement('div');
@@ -49,14 +50,20 @@ function createMultiPost() {
     const featureTextContainer = document.createElement('div');
     const popuph2 = document.createElement('h2');
     const popupUl = document.createElement('ul');
+    const linklive = document.createElement('a');
+    const linkSrc = document.createElement('a');
 
-    featureText.textContent = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.';
+    featureText.textContent = multiPost.description;
     featureImg.src = multiPost.featureImg;
     closeIcon.textContent = 'X';
     closeIcon.style.cursor = 'pointer';
     liveButton.style.cursor = 'pointer';
     srcButton.style.cursor = 'pointer';
+    linklive.href = multiPost.liveLink;
+    linklive.target = '_blank';
     liveButton.value = 'See Live';
+    linkSrc.href = multiPost.srcLink;
+    linkSrc.target = '_blank';
     srcButton.value = 'See Source';
     liveButton.textContent = 'See Live';
     srcButton.textContent = 'See Source';
@@ -84,8 +91,10 @@ function createMultiPost() {
     featureContainer.appendChild(featureTextContainer);
     featureTextContainer.appendChild(featureText);
     featureTextContainer.appendChild(buttonContainer);
-    buttonContainer.appendChild(liveButton);
-    buttonContainer.appendChild(srcButton);
+    linklive.appendChild(liveButton);
+    buttonContainer.appendChild(linklive);
+    linkSrc.appendChild(srcButton);
+    buttonContainer.appendChild(linkSrc);
     wrapDiv.appendChild(closeIconContainer);
     wrapDiv.appendChild(popupUl);
     wrapDiv.appendChild(featureContainer);
@@ -99,7 +108,7 @@ function createMultiPost() {
 
 function createNumberOfRows(numberOfRows) {
   for (let i = 0; i < numberOfRows; i += 1) {
-    createRow();
+    createRow(i * 3);
   }
 }
 
@@ -115,8 +124,13 @@ function createHtmlForItem(myItems) {
     const button = document.createElement('button');
     const featureImgSrc = myItems[i].featureImg;
 
+    if (myItems[i].id !== 'left-img' && myItems[i].id !== 'mid-img' && myItems[i].id !== 'right-img') {
+      article.style.backgroundImage = `url(${myItems[i].featureImg})`;
+      article.style.backgroundSize = '100% 100%';
+    }
+
     article.classList.add(myItems[i].id);
-    for (let j = 0; j < myItems[j].tech.length; j += 1) {
+    for (let j = 0; j < myItems[i].tech.length; j += 1) {
       const li = document.createElement('li');
 
       li.textContent = myItems[i].tech[j];
@@ -144,12 +158,18 @@ function createHtmlForItem(myItems) {
       const featureTextContainer = document.createElement('div');
       const popuph2 = document.createElement('h2');
       const popupUl = document.createElement('ul');
+      const linklive = document.createElement('a');
+      const linkSrc = document.createElement('a');
 
-      featureText.textContent = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releax map lapora verita.';
+      featureText.textContent = myItems[i].description;
       featureImg.src = featureImgSrc;
       closeIcon.textContent = 'X';
       closeIcon.style.cursor = 'pointer';
+      linklive.href = myItems[i].liveLink;
+      linklive.target = '_blank';
       liveButton.style.cursor = 'pointer';
+      linkSrc.href = myItems[i].srcLink;
+      linkSrc.target = '_blank';
       srcButton.style.cursor = 'pointer';
       liveButton.value = 'See Live';
       srcButton.value = 'See Source';
@@ -174,8 +194,10 @@ function createHtmlForItem(myItems) {
       featureContainer.appendChild(featureTextContainer);
       featureTextContainer.appendChild(featureText);
       featureTextContainer.appendChild(buttonContainer);
-      buttonContainer.appendChild(liveButton);
-      buttonContainer.appendChild(srcButton);
+      linklive.appendChild(liveButton);
+      buttonContainer.appendChild(linklive);
+      linkSrc.appendChild(srcButton);
+      buttonContainer.appendChild(linkSrc);
       wrapDiv.appendChild(closeIconContainer);
       wrapDiv.appendChild(popupUl);
       wrapDiv.appendChild(featureContainer);
@@ -196,5 +218,5 @@ function createHtmlForItem(myItems) {
 }
 
 createNumberOfRows(2);
-createMultiPost();
+createMultiPost(0);
 createHtmlForItem(myItems);
