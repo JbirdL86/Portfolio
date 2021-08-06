@@ -334,6 +334,7 @@ header {
 .popTech {
   display: flex;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .feature-container {
@@ -794,6 +795,7 @@ header {
   .button-grid > li {
     font-size: 15px;
     line-height: 20px;
+    padding: 12px 17px;
     margin: 0;
   }
 
