@@ -10,25 +10,14 @@ function Item(index, id, name, description, featureImg, tech, liveLink, srcLink)
 }
 
 const myItems = [];
-const myTech = ['html', 'css', 'JavaScript', 'bootsrap'];
 
-function createRow(index) {
-  for (let i = index; i < 3 * (index + 1); i += 1) {
-    let myItem;
-    if (i === index) {
-      myItem = new Item(i, 'left-img', 'Profesional Art Printing Data More', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry standard', 'assets/leftimg.png', myTech, 'jbirdL86.github.com/Portfolio', 'https://github.com/JbirdL86/Portfolio');
-      myItems.push(myItem);
-    }
-    if (i === index + 1) {
-      myItem = new Item(i, 'mid-img', 'Data DashboardHealthcare', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard', 'assets/midimg.png', myTech, null, null);
-      myItems.push(myItem);
-    }
-    if (i === index + 2) {
-      myItem = new Item(i, 'right-img', 'Website Protfolio', 'A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry\'s standard', 'assets/rightimg.png', ['HTML', 'BootStrap', 'JavaScript'], null, null);
-      myItems.push(myItem);
-    }
-  }
-  myItems[0] = new Item(0, 'project-img', 'To Do List', 'A very usefull tool to organize your daily tasks; No accounts or sign-ups required. Just load and use, no login required! The to do list is helpful to organize your daily tasks in a really simple way', 'assets/todolist1.png', ['HTML', 'CSS', 'JavaScript'], 'https://jbirdl86.github.io/webpack-project/dist/', 'https://github.com/JbirdL86/webpack-project');
+function createRow() {
+  myItems[0] = new Item(0, 'project-img', 'Rental Cars APP', 'A very usefull app for car rental bussiness. It allows users to post a car for rent, reserve a car only if user is signed in. Back-end build as an api and front end made in React', 'assets/rentalCarsApp.png', ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Ruby On Rails'], 'https://hanjelscars.netlify.app/', 'https://github.com/Hamzaoutdoors/rentalcars_backend');
+  myItems[1] = new Item(0, 'project-img', 'Budget App', 'It is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.', 'assets/budgetApp.png', ['HTML', 'CSS', 'Ruby On Rails'], 'https://pacific-thicket-87114.herokuapp.com/', 'https://github.com/JbirdL86/budget-app');
+  myItems[2] = new Item(0, 'project-img', 'Recipe App', 'The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe.', 'assets/recipeApp.png', ['HTML', 'CSS', 'Ruby On Rails'], 'https://jbirdl86.github.io/webpack-project/dist/', 'https://github.com/JbirdL86/webpack-project');
+  myItems[3] = new Item(0, 'project-img', 'Blog App', 'A blogging app in which users will be able to register and have a profile with posts. Each user will have a route to every single instance and posts list will be routed too, as well as every single post.', 'assets/blogApp.png', ['HTML', 'CSS', 'Ruby On Rails'], 'https://github.com/JbirdL86/Blog-App', 'https://github.com/JbirdL86/Blog-App');
+  myItems[4] = new Item(0, 'project-img', 'Covid Tracking App', 'The covid tracking App allows you to keep track of the covid-19 pandemic by country on the current date. You can check information by contry and some countries contain information for its cities. The app desing is ment for mobile devices only.', 'assets/covidApp.png', ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'], 'https://agitated-pike-942a36.netlify.app/', 'https://github.com/JbirdL86/covid19-tracking');
+  myItems[5] = new Item(0, 'project-img', 'To Do List', 'A very usefull tool to organize your daily tasks; No accounts or sign-ups required. Just load and use, no login required! The to do list is helpful to organize your daily tasks in a really simple way', 'assets/todolist1.png', ['HTML', 'CSS', 'JavaScript'], 'https://jbirdl86.github.io/webpack-project/dist/', 'https://github.com/JbirdL86/webpack-project');
 }
 
 function createMultiPost(index) {
@@ -108,7 +97,7 @@ function createMultiPost(index) {
 
 function createNumberOfRows(numberOfRows) {
   for (let i = 0; i < numberOfRows; i += 1) {
-    createRow(i * 3);
+    createRow();
   }
 }
 
