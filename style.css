@@ -640,6 +640,10 @@ header {
   border-radius: 10px;
 }
 
+.social-links > li > a{
+  color: #000;
+}
+
 @media only screen and (min-width: 993px) {
   button:enabled {
     background-color: #d7410b;
